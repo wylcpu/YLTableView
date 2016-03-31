@@ -16,6 +16,7 @@
 		F80B94C51CAC22EC00CC138C /* YLTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F80B94C41CAC22EC00CC138C /* YLTableView.m */; };
 		F80B94C81CAC33A700CC138C /* YLCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F80B94C71CAC33A700CC138C /* YLCell.m */; };
 		F80B94CB1CAC33B800CC138C /* YLCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = F80B94CA1CAC33B800CC138C /* YLCell2.m */; };
+		F8216AA81CACF1E000DD6D04 /* liqin_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8216AA71CACF1E000DD6D04 /* liqin_1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		F80B94C71CAC33A700CC138C /* YLCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLCell.m; sourceTree = "<group>"; };
 		F80B94C91CAC33B800CC138C /* YLCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLCell2.h; sourceTree = "<group>"; };
 		F80B94CA1CAC33B800CC138C /* YLCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLCell2.m; sourceTree = "<group>"; };
+		F8216AA71CACF1E000DD6D04 /* liqin_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = liqin_1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				F80B94B81CAC22CA00CC138C /* Assets.xcassets */,
 				F80B94BA1CAC22CA00CC138C /* LaunchScreen.storyboard */,
 				F80B94BD1CAC22CA00CC138C /* Info.plist */,
+				F8216AA71CACF1E000DD6D04 /* liqin_1.jpg */,
 				F80B94AC1CAC22CA00CC138C /* Supporting Files */,
 				F80B94C31CAC22EC00CC138C /* YLTableView.h */,
 				F80B94C41CAC22EC00CC138C /* YLTableView.m */,
@@ -154,6 +157,7 @@
 				F80B94BC1CAC22CA00CC138C /* LaunchScreen.storyboard in Resources */,
 				F80B94B91CAC22CA00CC138C /* Assets.xcassets in Resources */,
 				F80B94B71CAC22CA00CC138C /* Main.storyboard in Resources */,
+				F8216AA81CACF1E000DD6D04 /* liqin_1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +324,7 @@
 				F80B94C21CAC22CA00CC138C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -21,29 +21,16 @@
     
     YLTableView *view = [[YLTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     NSMutableArray *arr = [[NSMutableArray alloc] init];
-    for (int i=0; i<10000; i++) {
-        
-            [arr addObject:@{@"jj":@"111111"}];
-        
+    for (int i=0; i<500; i++) {
+        [arr addObject:@{@"jj":@"111111"}];
     }
+//    view.noResultView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"liqin_1.jpg"]];
     view.dataArray = arr;
-    view.cellIdentifierArray = @[@"YLCell",@"YLCell2"];
-    view.cellIdentifierBlock = ^(NSIndexPath *indexPath){
-        return @"YLCell2";
+    view.cellData =  ^(UITableViewCell * cell ,id data,NSIndexPath *indexPath){
+          cell.textLabel.text = @"dsfasfdafhdish";
     };
-    view.cellHeightBlock = ^(UITableView *tanl,NSIndexPath *index) {
-        if (index.section == 0) {
-            return 200.0;
-        }
-        return 70.0;
-    };
-    __weak typeof(self)weakSelf = self;
-      view.cellData =  ^(UITableViewCell * cell ,id data,NSIndexPath *indexPath){
-      
-            YLCell2 *cell2 = (YLCell2*)cell;
-            [cell2 config:data];
-        
-    };
+    
+    
     [self.view addSubview:view];
 }
 - (void)click{
