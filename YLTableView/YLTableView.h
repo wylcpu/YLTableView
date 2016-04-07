@@ -35,7 +35,10 @@
  *  设置没有数据时的显示
  */
 @property (nonatomic,strong) UIView *noResultView;
-
+/**
+ *  默认cell使用
+ */
+@property (nonatomic,assign) UITableViewCellStyle tableViewCellStyle;
 
 
 /**
@@ -58,6 +61,14 @@
  *  数据填充，使用自定义的cell时，需要强转，（customCell *）cell;
  */
 @property (nonatomic,copy) void(^cellData)(UITableViewCell* cell,id data,NSIndexPath *indexPath);
+/**
+ *  设置headerTitle
+ */
+@property (nonatomic,copy) NSString *(^headerTitleBlock)(UITableView *tableView,NSInteger section);
+/**
+ *  设置footerTitle
+ */
+@property (nonatomic,copy) NSString *(^footerTitleBlock)(UITableView *tableView,NSInteger section);
 /**
  *  点击
  */

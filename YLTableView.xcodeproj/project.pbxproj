@@ -15,8 +15,9 @@
 		F80B94BC1CAC22CA00CC138C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F80B94BA1CAC22CA00CC138C /* LaunchScreen.storyboard */; };
 		F80B94C51CAC22EC00CC138C /* YLTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F80B94C41CAC22EC00CC138C /* YLTableView.m */; };
 		F80B94C81CAC33A700CC138C /* YLCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F80B94C71CAC33A700CC138C /* YLCell.m */; };
-		F80B94CB1CAC33B800CC138C /* YLCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = F80B94CA1CAC33B800CC138C /* YLCell2.m */; };
+		F80E4A8E1CB2B29600E641A5 /* head.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F80E4A8D1CB2B29600E641A5 /* head.jpeg */; };
 		F8216AA81CACF1E000DD6D04 /* liqin_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8216AA71CACF1E000DD6D04 /* liqin_1.jpg */; };
+		F889F0D51CB4B9BF000F5970 /* gou.png in Resources */ = {isa = PBXBuildFile; fileRef = F889F0D41CB4B9BF000F5970 /* gou.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +35,9 @@
 		F80B94C41CAC22EC00CC138C /* YLTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTableView.m; sourceTree = "<group>"; };
 		F80B94C61CAC33A700CC138C /* YLCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLCell.h; sourceTree = "<group>"; };
 		F80B94C71CAC33A700CC138C /* YLCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLCell.m; sourceTree = "<group>"; };
-		F80B94C91CAC33B800CC138C /* YLCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLCell2.h; sourceTree = "<group>"; };
-		F80B94CA1CAC33B800CC138C /* YLCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLCell2.m; sourceTree = "<group>"; };
+		F80E4A8D1CB2B29600E641A5 /* head.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = head.jpeg; sourceTree = "<group>"; };
 		F8216AA71CACF1E000DD6D04 /* liqin_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = liqin_1.jpg; sourceTree = "<group>"; };
+		F889F0D41CB4B9BF000F5970 /* gou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gou.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +54,7 @@
 		F80B94A01CAC22CA00CC138C = {
 			isa = PBXGroup;
 			children = (
-				F80B94AB1CAC22CA00CC138C /* YLTableView */,
+				F80E4A8C1CB2AACD00E641A5 /* New Group */,
 				F80B94AA1CAC22CA00CC138C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,7 +70,10 @@
 		F80B94AB1CAC22CA00CC138C /* YLTableView */ = {
 			isa = PBXGroup;
 			children = (
+				F80E4A8B1CB2AAC000E641A5 /* YLTableView */,
 				F80B94AF1CAC22CA00CC138C /* AppDelegate.h */,
+				F80E4A8D1CB2B29600E641A5 /* head.jpeg */,
+				F889F0D41CB4B9BF000F5970 /* gou.png */,
 				F80B94B01CAC22CA00CC138C /* AppDelegate.m */,
 				F80B94B21CAC22CA00CC138C /* ViewController.h */,
 				F80B94B31CAC22CA00CC138C /* ViewController.m */,
@@ -79,12 +83,8 @@
 				F80B94BD1CAC22CA00CC138C /* Info.plist */,
 				F8216AA71CACF1E000DD6D04 /* liqin_1.jpg */,
 				F80B94AC1CAC22CA00CC138C /* Supporting Files */,
-				F80B94C31CAC22EC00CC138C /* YLTableView.h */,
-				F80B94C41CAC22EC00CC138C /* YLTableView.m */,
 				F80B94C61CAC33A700CC138C /* YLCell.h */,
 				F80B94C71CAC33A700CC138C /* YLCell.m */,
-				F80B94C91CAC33B800CC138C /* YLCell2.h */,
-				F80B94CA1CAC33B800CC138C /* YLCell2.m */,
 			);
 			path = YLTableView;
 			sourceTree = "<group>";
@@ -95,6 +95,23 @@
 				F80B94AD1CAC22CA00CC138C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F80E4A8B1CB2AAC000E641A5 /* YLTableView */ = {
+			isa = PBXGroup;
+			children = (
+				F80B94C31CAC22EC00CC138C /* YLTableView.h */,
+				F80B94C41CAC22EC00CC138C /* YLTableView.m */,
+			);
+			name = YLTableView;
+			sourceTree = "<group>";
+		};
+		F80E4A8C1CB2AACD00E641A5 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				F80B94AB1CAC22CA00CC138C /* YLTableView */,
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +174,8 @@
 				F80B94BC1CAC22CA00CC138C /* LaunchScreen.storyboard in Resources */,
 				F80B94B91CAC22CA00CC138C /* Assets.xcassets in Resources */,
 				F80B94B71CAC22CA00CC138C /* Main.storyboard in Resources */,
+				F889F0D51CB4B9BF000F5970 /* gou.png in Resources */,
+				F80E4A8E1CB2B29600E641A5 /* head.jpeg in Resources */,
 				F8216AA81CACF1E000DD6D04 /* liqin_1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,7 +192,6 @@
 				F80B94B11CAC22CA00CC138C /* AppDelegate.m in Sources */,
 				F80B94C81CAC33A700CC138C /* YLCell.m in Sources */,
 				F80B94AE1CAC22CA00CC138C /* main.m in Sources */,
-				F80B94CB1CAC33B800CC138C /* YLCell2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

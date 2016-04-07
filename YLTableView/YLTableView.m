@@ -8,6 +8,7 @@
 
 #import "YLTableView.h"
 @interface YLTableView ()<UITableViewDelegate,UITableViewDataSource> {
+//    二维数组标志位
     BOOL _isTwoDimensional;
 }
 @end
@@ -22,7 +23,8 @@
 //    消掉多余下划线
     self.tableFooterView = [UIView new];
 //    默认设置
-    self.cellClassNameArray = @[@"UITableViewCell"];
+//    self.cellClassNameArray = @[@"UITableViewCell"];
+    self.tableViewCellStyle = UITableViewCellStyleDefault;
     return self;
 }
 #pragma mark - 设置数据
@@ -41,8 +43,8 @@
     for (NSString* className in cellClassNameArray) {
         [self registerClass:NSClassFromString(className) forCellReuseIdentifier:className];
     }
-    
 }
+
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     if (_isTwoDimensional) {
@@ -50,6 +52,18 @@
     } else {
         return 1;
     }
+}
+- (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (self.headerTitleBlock) {
+      return  self.headerTitleBlock(tableView,section);
+    }
+    return nil;
+}
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+    if (self.footerTitleBlock) {
+        return self.footerTitleBlock(tableView,section);
+    }
+    return nil;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (_isTwoDimensional) {
@@ -67,23 +81,27 @@
     static  NSString *identifier = nil;
     if (self.cellIdentifierBlock) {
         identifier = self.cellIdentifierBlock(indexPath);
-        //        identifier = @"sdfsdfsdf";
     } else {
         if (indexPath.section < self.cellClassNameArray.count) {
             identifier = self.cellClassNameArray[section];
+        } else if(self.cellClassNameArray.count == 0){
+            identifier = @"UITableViewCell";
         }
-        
     }
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:self.tableViewCellStyle reuseIdentifier:identifier];
+    }
+    return cell;
+}
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (self.cellData) {
         if (_isTwoDimensional) {
             self.cellData(cell,self.dataArray[indexPath.section][indexPath.row],indexPath);
         } else {
             self.cellData(cell,self.dataArray[indexPath.row],indexPath);
         }
-        
     }
-    return cell;
 }
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -95,7 +113,7 @@
     return 0;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    if (self.footerHeight>0) {
+    if (self.footerHeight > 0) {
         return self.footerHeight;
     } else if (self.footerHeightBlock) {
         return self.footerHeightBlock(tableView,section);
